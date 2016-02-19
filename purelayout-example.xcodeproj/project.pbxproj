@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		61D891D2AEBB7E07F1AA6CFA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 466D6858F92739919D2E4AFC /* libPods.a */; };
 		C0E804B01C7712BC005C6A2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E804AF1C7712BC005C6A2B /* main.m */; };
-		C0E804B31C7712BC005C6A2B /* PLEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E804B21C7712BC005C6A2B /* PLEAppDelegate.m */; };
-		C0E804B61C7712BC005C6A2B /* PLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E804B51C7712BC005C6A2B /* PLEViewController.m */; };
 		C0E804BB1C7712BC005C6A2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0E804BA1C7712BC005C6A2B /* Assets.xcassets */; };
+		C0E804CC1C776140005C6A2B /* PLEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E804C71C776140005C6A2B /* PLEAppDelegate.m */; };
+		C0E804CD1C776140005C6A2B /* PLEExampleHubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E804CB1C776140005C6A2B /* PLEExampleHubViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,12 +19,12 @@
 		586C0E9619CECE17DF65FB07 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C0E804AB1C7712BC005C6A2B /* purelayout-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "purelayout-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E804AF1C7712BC005C6A2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C0E804B11C7712BC005C6A2B /* PLEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLEAppDelegate.h; sourceTree = "<group>"; };
-		C0E804B21C7712BC005C6A2B /* PLEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLEAppDelegate.m; sourceTree = "<group>"; };
-		C0E804B41C7712BC005C6A2B /* PLEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLEViewController.h; sourceTree = "<group>"; };
-		C0E804B51C7712BC005C6A2B /* PLEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLEViewController.m; sourceTree = "<group>"; };
 		C0E804BA1C7712BC005C6A2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0E804BF1C7712BC005C6A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0E804C61C776140005C6A2B /* PLEAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLEAppDelegate.h; sourceTree = "<group>"; };
+		C0E804C71C776140005C6A2B /* PLEAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLEAppDelegate.m; sourceTree = "<group>"; };
+		C0E804CA1C776140005C6A2B /* PLEExampleHubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLEExampleHubViewController.h; sourceTree = "<group>"; };
+		C0E804CB1C776140005C6A2B /* PLEExampleHubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLEExampleHubViewController.m; sourceTree = "<group>"; };
 		CAF366CC53B786730588D85D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,10 +78,8 @@
 		C0E804AD1C7712BC005C6A2B /* purelayout-example */ = {
 			isa = PBXGroup;
 			children = (
-				C0E804B11C7712BC005C6A2B /* PLEAppDelegate.h */,
-				C0E804B21C7712BC005C6A2B /* PLEAppDelegate.m */,
-				C0E804B41C7712BC005C6A2B /* PLEViewController.h */,
-				C0E804B51C7712BC005C6A2B /* PLEViewController.m */,
+				C0E804C51C776140005C6A2B /* AppDelegate */,
+				C0E804C81C776140005C6A2B /* ViewController */,
 				C0E804BA1C7712BC005C6A2B /* Assets.xcassets */,
 				C0E804BF1C7712BC005C6A2B /* Info.plist */,
 				C0E804AE1C7712BC005C6A2B /* Supporting Files */,
@@ -95,6 +93,32 @@
 				C0E804AF1C7712BC005C6A2B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0E804C51C776140005C6A2B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C0E804C61C776140005C6A2B /* PLEAppDelegate.h */,
+				C0E804C71C776140005C6A2B /* PLEAppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C0E804C81C776140005C6A2B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C0E804C91C776140005C6A2B /* ExampleHub */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C0E804C91C776140005C6A2B /* ExampleHub */ = {
+			isa = PBXGroup;
+			children = (
+				C0E804CA1C776140005C6A2B /* PLEExampleHubViewController.h */,
+				C0E804CB1C776140005C6A2B /* PLEExampleHubViewController.m */,
+			);
+			path = ExampleHub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,8 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0E804B61C7712BC005C6A2B /* PLEViewController.m in Sources */,
-				C0E804B31C7712BC005C6A2B /* PLEAppDelegate.m in Sources */,
+				C0E804CC1C776140005C6A2B /* PLEAppDelegate.m in Sources */,
+				C0E804CD1C776140005C6A2B /* PLEExampleHubViewController.m in Sources */,
 				C0E804B01C7712BC005C6A2B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

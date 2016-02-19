@@ -8,7 +8,7 @@
 
 #import "PLEAppDelegate.h"
 
-#import "PLEViewController.h"
+#import "PLEExampleHubViewController.h"
 
 @interface PLEAppDelegate ()
 
@@ -75,7 +75,7 @@
 {
     if (!_rootNavigationController)
     {
-        _rootNavigationController = [[UINavigationController alloc] initWithRootViewController:[[PLEViewController alloc] init]];
+        _rootNavigationController = [[UINavigationController alloc] initWithRootViewController:[[PLEExampleHubViewController alloc] init]];
     }
     
     return _rootNavigationController;

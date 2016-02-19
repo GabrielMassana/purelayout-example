@@ -6,13 +6,13 @@
 //  Copyright © 2016 GabrielMassana. All rights reserved.
 //
 
-#import "PLEViewController.h"
+#import "PLEExampleHubViewController.h"
 
-@interface PLEViewController ()
+@interface PLEExampleHubViewController ()
 
 @end
 
-@implementation PLEViewController
+@implementation PLEExampleHubViewController
 
 - (void)viewDidLoad
 {
