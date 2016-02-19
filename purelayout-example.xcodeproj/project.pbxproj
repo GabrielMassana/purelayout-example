@@ -11,9 +11,7 @@
 		C0E804B01C7712BC005C6A2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E804AF1C7712BC005C6A2B /* main.m */; };
 		C0E804B31C7712BC005C6A2B /* PLEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E804B21C7712BC005C6A2B /* PLEAppDelegate.m */; };
 		C0E804B61C7712BC005C6A2B /* PLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E804B51C7712BC005C6A2B /* PLEViewController.m */; };
-		C0E804B91C7712BC005C6A2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0E804B71C7712BC005C6A2B /* Main.storyboard */; };
 		C0E804BB1C7712BC005C6A2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0E804BA1C7712BC005C6A2B /* Assets.xcassets */; };
-		C0E804BE1C7712BC005C6A2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0E804BC1C7712BC005C6A2B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +23,7 @@
 		C0E804B21C7712BC005C6A2B /* PLEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLEAppDelegate.m; sourceTree = "<group>"; };
 		C0E804B41C7712BC005C6A2B /* PLEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLEViewController.h; sourceTree = "<group>"; };
 		C0E804B51C7712BC005C6A2B /* PLEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLEViewController.m; sourceTree = "<group>"; };
-		C0E804B81C7712BC005C6A2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0E804BA1C7712BC005C6A2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C0E804BD1C7712BC005C6A2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0E804BF1C7712BC005C6A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAF366CC53B786730588D85D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,9 +82,7 @@
 				C0E804B21C7712BC005C6A2B /* PLEAppDelegate.m */,
 				C0E804B41C7712BC005C6A2B /* PLEViewController.h */,
 				C0E804B51C7712BC005C6A2B /* PLEViewController.m */,
-				C0E804B71C7712BC005C6A2B /* Main.storyboard */,
 				C0E804BA1C7712BC005C6A2B /* Assets.xcassets */,
-				C0E804BC1C7712BC005C6A2B /* LaunchScreen.storyboard */,
 				C0E804BF1C7712BC005C6A2B /* Info.plist */,
 				C0E804AE1C7712BC005C6A2B /* Supporting Files */,
 			);
@@ -163,9 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0E804BE1C7712BC005C6A2B /* LaunchScreen.storyboard in Resources */,
 				C0E804BB1C7712BC005C6A2B /* Assets.xcassets in Resources */,
-				C0E804B91C7712BC005C6A2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,25 +223,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C0E804B71C7712BC005C6A2B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C0E804B81C7712BC005C6A2B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C0E804BC1C7712BC005C6A2B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C0E804BD1C7712BC005C6A2B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C0E804C01C7712BC005C6A2B /* Debug */ = {
@@ -337,7 +310,9 @@
 			baseConfigurationReference = 586C0E9619CECE17DF65FB07 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = "purelayout-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Gabriel-Massana.purelayout-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -349,7 +324,9 @@
 			baseConfigurationReference = CAF366CC53B786730588D85D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = "purelayout-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Gabriel-Massana.purelayout-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,15 +8,28 @@
 
 #import "PLEAppDelegate.h"
 
+#import "PLEViewController.h"
+
 @interface PLEAppDelegate ()
+
+/**
+ Root navigation controller.
+ */
+@property (nonatomic, strong) UINavigationController *rootNavigationController;
 
 @end
 
 @implementation PLEAppDelegate
 
+#pragma mark - AppLifecycle
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window.backgroundColor = [UIColor clearColor];
+    self.window.clipsToBounds = NO;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -40,6 +53,32 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Window
+
+- (UIWindow *)window
+{
+    if (!_window)
+    {
+        _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _window.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
+        _window.rootViewController = self.rootNavigationController;
+    }
+    
+    return _window;
+}
+
+#pragma mark - Root
+
+- (UINavigationController *)rootNavigationController
+{
+    if (!_rootNavigationController)
+    {
+        _rootNavigationController = [[UINavigationController alloc] initWithRootViewController:[[PLEViewController alloc] init]];
+    }
+    
+    return _rootNavigationController;
 }
 
 @end
