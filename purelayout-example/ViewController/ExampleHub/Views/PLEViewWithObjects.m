@@ -47,6 +47,7 @@
         _titleLabel.text = @"Title Label";
         _titleLabel.font = [UIFont systemFontOfSize:25.0f];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.backgroundColor = [UIColor whiteColor];
     }
     
     return _titleLabel;
@@ -62,6 +63,38 @@
     }
     
     return _footerImageView;
+}
+
+#pragma mark - Constraints
+
+- (void)updateConstraints
+{
+    [self.titleLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft
+                                      withInset:70.0f];
+    
+    [self.titleLabel autoPinEdgeToSuperviewEdge:ALEdgeRight
+                                      withInset:70.0f];
+    
+    [self.titleLabel autoPinEdgeToSuperviewEdge:ALEdgeTop
+                                      withInset:50.0f];
+    
+    /*-------------------*/
+
+    [self.footerImageView autoPinEdge:ALEdgeTop
+                               toEdge:ALEdgeBottom
+                               ofView:self.titleLabel
+                           withOffset:30.0f];
+    
+    [self.footerImageView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    
+    [self.footerImageView autoPinEdgeToSuperviewEdge:ALEdgeRight];
+    
+    [self.footerImageView autoSetDimension:ALDimensionHeight
+                                    toSize:94.0f];
+    
+    /*-------------------*/
+    
+    [super updateConstraints];
 }
 
 @end
