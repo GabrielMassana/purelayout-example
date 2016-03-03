@@ -9,10 +9,13 @@
 #import "PLEExampleHubViewController.h"
 
 #import "PureLayout.h"
+#import "PLEViewWithObjects.h"
 
 @interface PLEExampleHubViewController ()
 
 @property (nonatomic, strong) UIButton *tableViewButton;
+
+@property (nonatomic, strong) PLEViewWithObjects *viewWithObjects;
 
 @end
 
@@ -26,7 +29,8 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self.view addSubview:self.tableViewButton];
+    [self.view addSubview:self.tableViewButton];    
+    [self.view addSubview:self.viewWithObjects];
 
     [self updateViewConstraints];
 }
@@ -38,6 +42,7 @@
     if (!_tableViewButton)
     {
         _tableViewButton = [UIButton newAutoLayoutView];
+        
         _tableViewButton.backgroundColor = [UIColor orangeColor];
         
         [_tableViewButton setTitle:@"Open Table View"
@@ -48,6 +53,16 @@
     }
     
     return _tableViewButton;
+}
+
+- (PLEViewWithObjects *)viewWithObjects
+{
+    if (!_viewWithObjects)
+    {
+        _viewWithObjects = [PLEViewWithObjects newAutoLayoutView];
+    }
+    
+    return _viewWithObjects;
 }
 
 #pragma mark - Constraints
@@ -67,6 +82,20 @@
 
     [self.tableViewButton autoSetDimension:ALDimensionHeight
                                     toSize:80.0f];
+    
+    /*-------------------*/
+
+    [self.viewWithObjects autoPinEdge:ALEdgeTop
+                               toEdge:ALEdgeBottom
+                               ofView:self.tableViewButton
+                           withOffset:10.0f];
+    
+    [self.viewWithObjects autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    
+    [self.viewWithObjects autoPinEdgeToSuperviewEdge:ALEdgeRight];
+    
+    [self.viewWithObjects autoSetDimension:ALDimensionHeight
+                                    toSize:320.0f];
 }
 
 @end
